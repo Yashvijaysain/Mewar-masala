@@ -20,23 +20,23 @@ export default function Home() {
   return (
     <main className="relative min-h-screen text-white selection:bg-yellow-500 selection:text-white">
       <Navbar />
-      
+
       {/* Render the 3D sequence as background */}
       {currentProduct.folderPath === "/images/haldi" && (
-          <SequenceRenderer folderPath={currentProduct.folderPath} frameCount={200} />
+        <SequenceRenderer folderPath={currentProduct.folderPath} frameCount={200} />
       )}
-      
+
       <div className="relative z-10 w-full">
         {/* Main Hero View */}
         <Hero product={currentProduct} />
 
         {/* Scrollytelling content */}
         <ProductScrollytelling product={currentProduct} />
-        
+
         {/* Buy Section / Footer block */}
         <section className="relative z-20 min-h-screen bg-black flex items-center justify-center py-20 px-4 pt-32">
           <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-            
+
             {/* Details & Copy */}
             <div className="space-y-12">
               <div>
@@ -55,16 +55,16 @@ export default function Home() {
             </div>
 
             {/* Buy Card */}
-            <motion.div 
+            <motion.div
               className="p-10 rounded-[2.5rem] bg-gradient-to-br from-white/10 to-white/5 border border-white/20 backdrop-blur-xl shadow-2xl relative overflow-hidden"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.4 }}
             >
-              <div 
+              <div
                 className="absolute -top-32 -right-32 w-64 h-64 rounded-full blur-3xl opacity-20 pointer-events-none"
                 style={{ backgroundColor: currentProduct.themeColor }}
               />
-              
+
               <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 mb-8 border-b border-white/10 pb-8">
                 <div>
                   <h3 className="text-3xl font-bold mb-2">Order {currentProduct.name}</h3>
@@ -105,7 +105,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <button 
+              <button
                 className="w-full py-5 rounded-2xl text-black font-bold text-xl uppercase tracking-wider transition-all transform hover:scale-[1.02] hover:shadow-xl"
                 style={{ backgroundColor: currentProduct.themeColor }}
               >
@@ -116,8 +116,8 @@ export default function Home() {
         </section>
 
         {/* Footer */}
-        <footer className="relative z-20 bg-black pb-12 text-center">
-          <p className="text-white/60 text-sm tracking-widest uppercase font-medium">
+        <footer className="relative z-20 bg-black pb-8 pr-6 md:pr-12 text-right">
+          <p className="text-white/40 text-xs tracking-widest uppercase font-medium hover:text-white/80 transition-colors">
             Made with <span className="text-red-500 mx-1">❤️</span> by Yash
           </p>
         </footer>
@@ -128,9 +128,8 @@ export default function Home() {
             <button
               key={prod.id}
               onClick={() => setCurrentProductIndex(idx)}
-              className={`w-4 h-4 rounded-full transition-all duration-300 ${
-                idx === currentProductIndex ? "scale-150" : "opacity-50 hover:opacity-100"
-              }`}
+              className={`w-4 h-4 rounded-full transition-all duration-300 ${idx === currentProductIndex ? "scale-150" : "opacity-50 hover:opacity-100"
+                }`}
               style={{ backgroundColor: prod.themeColor }}
               title={prod.name}
               aria-label={`Switch to ${prod.name}`}
