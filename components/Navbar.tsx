@@ -28,7 +28,7 @@ export default function Navbar() {
             <img
               src="/logo.png"
               alt="Mewar Masala Logo"
-              className="h-32 md:h-48 lg:h-64 w-auto object-contain brightness-0 invert drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] transition-transform hover:scale-110"
+              className="h-8 md:h-10 lg:h-14 w-auto object-contain brightness-0 invert drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] transition-transform hover:scale-110"
             />
           </div>
 
