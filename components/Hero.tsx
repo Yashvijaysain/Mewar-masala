@@ -15,11 +15,11 @@ export default function Hero({ product }: HeroProps) {
 
   return (
     <div className="relative h-screen flex flex-col items-center justify-center overflow-hidden">
-      <motion.div 
+      <motion.div
         style={{ y, opacity }}
         className="z-10 text-center px-4 w-full max-w-4xl pt-20"
       >
-        <motion.p 
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -27,8 +27,8 @@ export default function Hero({ product }: HeroProps) {
         >
           {product.subName}
         </motion.p>
-        
-        <motion.h1 
+
+        <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -38,10 +38,10 @@ export default function Hero({ product }: HeroProps) {
         </motion.h1>
 
         <motion.div
-           initial={{ opacity: 0 }}
-           animate={{ opacity: 1 }}
-           transition={{ duration: 1, delay: 0.8 }}
-           className="mt-8 flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4 mix-blend-overlay px-4"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.8 }}
+          className="mt-8 flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4 mix-blend-overlay px-4"
         >
           {product.features.map((feature, idx) => (
             <React.Fragment key={idx}>
@@ -52,14 +52,14 @@ export default function Hero({ product }: HeroProps) {
         </motion.div>
       </motion.div>
 
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
         className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center z-10"
       >
         <div className="w-[1px] h-16 bg-white/30 overflow-hidden mb-4">
-          <motion.div 
+          <motion.div
             animate={{ y: [0, 64] }}
             transition={{ repeat: Infinity, duration: 1.5, ease: "linear" }}
             className="w-full h-1/2 bg-yellow-500"
