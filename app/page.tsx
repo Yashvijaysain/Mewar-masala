@@ -115,6 +115,13 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Footer */}
+        <footer className="relative z-20 bg-black pb-12 text-center">
+          <p className="text-white/60 text-sm tracking-widest uppercase font-medium">
+            Made with <span className="text-red-500 mx-1">❤️</span> by Yash
+          </p>
+        </footer>
+
         {/* Product Switcher (Optional - for demoing other lines) */}
         <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 flex gap-4 p-2 bg-black/50 backdrop-blur-xl rounded-full border border-white/10">
           {products.map((prod, idx) => (
