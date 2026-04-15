@@ -5,7 +5,7 @@ import "./globals.css";
 const outfit = Outfit({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Mewar Masala | Power of Tradition",
+  title: "Nano Haldi | Power of Tradition",
   description: "Premium haldi masala drink brand - Ancient wellness meets modern nutrition.",
 };
 

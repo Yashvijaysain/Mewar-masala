@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --product-gradient: linear-gradient(135deg, #FFC107 0%, #FF8F00 100%);
+  --product-gradient: linear-gradient(135deg, #66BB6A 0%, #2E7D32 100%);
 }
 
 body {
@@ -14,7 +14,7 @@ body {
 }
 
 ::selection {
-  background-color: #eab308; /* Tailwind yellow-500 */
+  background-color: #22c55e; /* Tailwind green-500 */
   color: white;
 }
 

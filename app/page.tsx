@@ -22,8 +22,13 @@ export default function Home() {
       <Navbar />
 
       {/* Render the 3D sequence as background */}
-      {currentProduct.folderPath === "/images/haldi" && (
-        <SequenceRenderer folderPath={currentProduct.folderPath} frameCount={200} />
+      {(["/images/haldi", "/images/mirchi", "/images/dhaniya"].includes(currentProduct.folderPath)) && (
+        <SequenceRenderer 
+          folderPath={currentProduct.folderPath} 
+          frameCount={
+            currentProduct.folderPath === "/images/mirchi" || currentProduct.folderPath === "/images/dhaniya" ? 240 : 200
+          } 
+        />
       )}
 
       <div className="relative z-10 w-full">
