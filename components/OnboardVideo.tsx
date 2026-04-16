@@ -145,9 +145,9 @@ export default function OnboardVideo({
         <div className="absolute inset-0 z-20 bg-black/90 flex items-center justify-center px-6 sm:px-12 text-center">
           <div className="w-full max-w-lg">
             <div className="mx-auto mb-6 h-14 w-14 sm:h-16 sm:w-16 rounded-full border-4 border-white/20 border-t-yellow-500 animate-spin" />
-            <h2 className="text-xl sm:text-3xl font-semibold mb-2">Loading onboarding animation...</h2>
+            <h2 className="text-xl sm:text-3xl font-semibold mb-2">Mewar Masala</h2>
             <p className="text-white/70 text-sm sm:text-base leading-relaxed max-w-md mx-auto">
-              Please wait while the onboarding frames load. The experience is optimized for mobile, tablet, and desktop.
+              Please wait while to load Website.
             </p>
           </div>
         </div>
