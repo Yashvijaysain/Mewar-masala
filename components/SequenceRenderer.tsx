@@ -18,6 +18,17 @@ export default function SequenceRenderer({ folderPath, frameCount }: SequenceRen
   const frameIndex = useTransform(scrollYProgress, [0, 1], [1, frameCount]);
 
   useEffect(() => {
+    setImages([]);
+    setIsLoaded(false);
+
+    const canvas = canvasRef.current;
+    if (canvas) {
+      const ctx = canvas.getContext("2d");
+      if (ctx) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+      }
+    }
+
     // Preload all images
     const loadImages = async () => {
       const loadedImages: HTMLImageElement[] = [];

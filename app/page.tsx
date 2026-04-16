@@ -5,11 +5,13 @@ import SequenceRenderer from "@/components/SequenceRenderer";
 import ProductScrollytelling from "@/components/ProductScrollytelling";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
+import OnboardVideo from "@/components/OnboardVideo";
 import { products } from "@/data/products";
 import { motion } from "framer-motion";
 
 export default function Home() {
   const [currentProductIndex, setCurrentProductIndex] = useState(0);
+  const [showOnboard, setShowOnboard] = useState(true);
   const currentProduct = products[currentProductIndex];
 
   // Optional: Auto update global css variable when product changes (for transitions)
@@ -17,13 +19,25 @@ export default function Home() {
     document.documentElement.style.setProperty('--product-gradient', currentProduct.gradient);
   }, [currentProduct]);
 
+  const handleOnboardComplete = () => {
+    setShowOnboard(false);
+  };
+
+  if (showOnboard) {
+    return <OnboardVideo onComplete={handleOnboardComplete} />;
+  }
+
   return (
     <main className="relative min-h-screen text-white selection:bg-yellow-500 selection:text-white">
       <Navbar />
 
       {/* Render the 3D sequence as background */}
-      {currentProduct.folderPath === "/images/haldi" && (
-        <SequenceRenderer folderPath={currentProduct.folderPath} frameCount={200} />
+      {(["/images/haldi", "/images/mirchi", "/images/dhaniya"].includes(currentProduct.folderPath)) && (
+        <SequenceRenderer
+          key={currentProduct.id}
+          folderPath={currentProduct.folderPath}
+          frameCount={currentProduct.folderPath === "/images/mirchi" || currentProduct.folderPath === "/images/dhaniya" ? 240 : 200}
+        />
       )}
 
       <div className="relative z-10 w-full">
