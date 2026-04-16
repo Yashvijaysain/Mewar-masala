@@ -27,7 +27,7 @@ export default function Navbar() {
           <div className="flex items-center">
             <img
               src="/logo.png"
-              alt="Nano Haldi Logo"
+              alt="Mewar Masala Logo"
               className="h-8 md:h-10 lg:h-14 w-auto object-contain brightness-0 invert drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] transition-transform hover:scale-110"
             />
           </div>
